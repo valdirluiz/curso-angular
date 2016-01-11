@@ -52,7 +52,7 @@
 		};
 
 		$scope.odernarPor  = function(campo){
-			$criterioDeOrdenacao = campo;
+			$scope.criterioDeOrdenacao = campo;
 			$scope.direcaoDaOrdenacao = !$scope.direcaoDaOrdenacao;
 		};
 
