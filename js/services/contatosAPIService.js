@@ -1,16 +1,21 @@
-angular.module("listaTelefonica").factory("contatosAPI", function($http, config){
+(function () {
+  'use strict';
 
-	var _getContatos = function(){
-		return $http.get(config.baseUrl+"/contatos");
-	};
+	angular.module("listaTelefonica").factory("contatosAPI", function($http, config){
 
-	var _saveContatos = function(contato){
-		return $http.post(config.baseUrl+"/contatos", contato);
-	};
+		var _getContatos = function(){
+			return $http.get(config.baseUrl+"/contatos");
+		};
 
-	return{
-		getContatos: _getContatos, 
-		saveContato: _saveContatos
-	};
+		var _saveContatos = function(contato){
+			return $http.post(config.baseUrl+"/contatos", contato);
+		};
 
-});
+		return{
+			getContatos: _getContatos, 
+			saveContato: _saveContatos
+		};
+
+	});
+
+})();
